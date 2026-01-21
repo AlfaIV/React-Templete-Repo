@@ -36,7 +36,7 @@ export default defineConfig({
     },
   },
   
-  logLevel: 'info',
+  logLevel: 'error',
 
   plugins: [react()],
 })
