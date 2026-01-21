@@ -1,7 +1,12 @@
 FROM node:24-alpine
 
-RUN apt-get update && \
-    apt-get install -y git
+RUN apk update && \
+    apk add --no-cache \
+    git \
+    bash \
+    curl \
+    wget \
+    && rm -rf /var/cache/apk/*
 
 RUN mkdir /workspace
 
