@@ -9,8 +9,3 @@ dist-ssr
 
 .vscode/*
 !.vscode/extensions.json
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
