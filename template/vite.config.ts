@@ -29,6 +29,10 @@ export default defineConfig({
       '~': path.resolve(__dirname, './src'),
       'components': path.resolve(__dirname, './src/components'),
       'assets': path.resolve(__dirname, './src/assets'),
+      'interfaces': path.resolve(__dirname, './src/interfaces'),
+      'network': path.resolve(__dirname, './src/network'),
+      'constants': path.resolve(__dirname, './src/constants'),
+      'configs': path.resolve(__dirname, './src/configs'),
     },
   },
   
