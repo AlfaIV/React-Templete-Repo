@@ -1,3 +1,4 @@
+import { answerTitle, getDataTitle } from '../../constants/constants';
 import './testComponent2.scss'
 
 const testComponent2 = () => {
@@ -9,9 +10,9 @@ const testComponent2 = () => {
         <>
             <div className='testComponent2'>
                 <button className='testComponent2__btn' onClick={buttonOnClick}>
-                    Получить данные
+                    {getDataTitle}
                 </button>
-                <h1 className='testComponent2__h1'>Тело ответа</h1>
+                <h1 className='testComponent2__h1'>{answerTitle}</h1>
                 <div className='testComponent2__body'></div>
             </div>
         </>
