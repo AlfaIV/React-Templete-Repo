@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "npm run server & npm run dev",
     "dev": "vite",
     "server": "json-server ./serverMock/db.json -p 8000",
     "build": "tsc -b && vite build",

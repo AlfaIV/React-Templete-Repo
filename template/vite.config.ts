@@ -4,25 +4,35 @@ import path from 'path';
 
 export default defineConfig({
   root: './',
-  
+
   server: {
+    host: true,
     port: 5000,
     open: true,
     strictPort: true,
     cors: true,
     proxy: {
-      '/api':{
-        target: 'localhost:8000',
+      '/api': {
+        target: 'http://localhost:8000',
         changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
+    watch: {
+      usePolling: true,
+      interval: 1000,
+    },
+    hmr: {
+      clientPort: 5000,
+      host: 'localhost',
+    },
   },
-  
+
   build: {
     outDir: 'dist',
     emptyOutDir: true,
   },
-  
+
   base: './',
   resolve: {
     alias: {
@@ -35,7 +45,7 @@ export default defineConfig({
       'configs': path.resolve(__dirname, './src/configs'),
     },
   },
-  
+
   logLevel: 'error',
 
   plugins: [react()],

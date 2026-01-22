@@ -12,9 +12,10 @@ class AxiosClient {
         ...config,
         params,
       };
-
-      const response = await axiosInstance.get<ApiResponse<T>>(url, axiosConfig);
-      return response.data.data;
+      const response = await axiosInstance.get(url, axiosConfig);
+      // console.log(url);
+      // console.log(response);
+      return response.data;
     } catch (error) {
       throw this.handleError(error);
     }
@@ -26,12 +27,12 @@ class AxiosClient {
     config?: RequestConfig
   ): Promise<T> {
     try {
-      const response = await axiosInstance.post<ApiResponse<T>>(
-        url, 
-        data, 
+      const response = await axiosInstance.post(
+        url,
+        data,
         config
       );
-      return response.data.data;
+      return response.data;
     } catch (error) {
       throw this.handleError(error);
     }

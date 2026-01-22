@@ -4,9 +4,15 @@ import './testComponent2.scss'
 
 const testComponent2 = () => {
   const buttonOnClick = () => {
-    console.log('click');
-    const response = api.get('/',);
-    console.log(response);
+    console.log('click12');
+    // const response = api.get('/users');
+    api.get('/users',).then((res) => console.log(res));
+    // console.log(response);
+
+
+    // fetch('http://localhost:8000/users')
+    //   .then(response => response.json())
+    //   .then(data => console.log(data));
   }
 
   return (

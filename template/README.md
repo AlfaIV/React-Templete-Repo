@@ -9,3 +9,6 @@ Template repositories for TS projects which base on Vite.
 роутинг
 проксирование на API
 компонент
+
+5000 - статика
+8000 - сервер
