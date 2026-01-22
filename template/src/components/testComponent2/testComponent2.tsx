@@ -5,10 +5,7 @@ import './testComponent2.scss'
 const testComponent2 = () => {
   const buttonOnClick = () => {
     console.log('click12');
-    // const response = api.get('/users');
     api.get('/users',).then((res) => console.log(res));
-    // console.log(response);
-
 
     // fetch('http://localhost:8000/users')
     //   .then(response => response.json())

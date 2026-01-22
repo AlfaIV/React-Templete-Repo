@@ -1,4 +1,4 @@
-import type { ApiError, ApiResponse, QueryParams, RequestConfig } from '../interfaces/network/i-axoisClinets';
+import type { ApiError, QueryParams, RequestConfig } from '../interfaces/network/i-axoisClinets';
 import axiosInstance from '../configs/axiosConfigs';
 
 class AxiosClient {

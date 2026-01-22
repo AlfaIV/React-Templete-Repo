@@ -4,6 +4,6 @@
         "dockerfile":"../Dockerfile"
     },
     "workspaceMount":"source=${localWorkspaceFolder},target=/workspace,type=bind",
-    "workspaceFolder":"/workspace",
+    "workspaceFolder":"/workspace/template",
     "remoteUser":"root"
 }
